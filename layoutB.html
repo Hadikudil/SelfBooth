@@ -131,7 +131,7 @@
 
   <!-- Header -->
   <section class="text-center py-6 px-4">
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#00695c]">📸 Layout A - 4 Pose Strip</h1>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-[#00695c]">📸 Layout B - 4 Pose Strip</h1>
     <p class="text-lg sm:text-xl text-gray-700 max-w-2xl">
       Pilih ekspresimu, atur waktu dan filter favoritmu, lalu biarkan kamera menangkap gayamu dalam 4 foto bertingkat. Hadirkan gaya terbaikmu dalam setiap jepretan 📸✨
     </p>
@@ -200,7 +200,7 @@
       </div>
     </div>
 
-    <canvas id="strip" width="400" height="900" class="bg-white rounded-xl"></canvas>
+    <canvas id="strip" width="400" height="1200" class="bg-white rounded-xl"></canvas>
   </section>
 
   <script>
@@ -258,7 +258,7 @@
       stripCtx.fillStyle = "white";
       stripCtx.fillRect(0, 0, stripCanvas.width, stripCanvas.height);
 
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 4; i++) {
         await countdown(timer);
         stripCtx.filter = video.style.filter;
        stripCtx.save();
