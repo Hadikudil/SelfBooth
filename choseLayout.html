@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pilih Layout - Selfbooth.ID</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #83b8c6, #e0f7fa);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .primary-color {
+      color: #00695c;
+    }
+
+    .navbar-hidden {
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .navbar-visible {
+      transform: translateY(0);
+      transition: transform 0.4s ease;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9em;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="w-full">
+  <nav class="navbar fixed top-0 z-50 w-full bg-white/90 shadow-md navbar-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4 flex-wrap">
+        <div class="text-2xl font-bold text-[#00796b] tracking-wide w-full sm:w-auto text-center sm:text-left mb-2 sm:mb-0">
+          SELFBOOTH.ID
+        </div>
+        <ul class="flex flex-wrap justify-center sm:justify-end w-full sm:w-auto space-x-4 sm:space-x-6 font-semibold text-[#00796b]">
+          <li><a href="index.html" class="hover:text-[#004d40] transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#004d40] transition">About</a></li>
+          <li><a href="privacy.html" class="hover:text-[#004d40] transition">Privacy</a></li>
+          <li><a href="contact.html" class="hover:text-[#004d40] transition">Contact</a></li>
+          <li><a href="choseLayout.html" class="hover:text-[#004d40] transition">Layout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="text-center py-12 px-4">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-[#00695c] mb-4 tracking-tight">
+      Pilih Layout Favoritmu!
+    </h1>
+    <p class="text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
+      Pilih gaya layout yang paling cocok dengan ekspresimu. Setiap pose punya cerita, dan kami siap menangkapnya dalam gaya unikmu. 
+    </p>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+
+    <div class="w-full max-w-xs bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center hover:scale-105 transition-transform relative">
+      <img src="1.png" alt="Layout A" class="w-full h-64 object-contain bg-gray-100" />
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-semibold">Layout A</h3>
+        <p class="text-sm text-gray-600 mb-4">Size 6 x 2 Strip <br>(3 Pose)</p>
+        <a href="layoutA.html">
+          <button class="bg-[#00897b] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#00695c] transition-transform hover:scale-105">
+            START 
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full max-w-xs bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center hover:scale-105 transition-transform relative">
+      <img src="2.png" alt="Layout B" class="w-full h-64 object-contain bg-gray-100" />
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-semibold">Layout B</h3>
+        <p class="text-sm text-gray-600 mb-4">Size 6 x 2 Strip <br>(4 Pose)</p>
+        <a href="layoutB.html">
+          <button class="bg-[#00897b] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#00695c] transition-transform hover:scale-105">
+            START 
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full max-w-xs bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center hover:scale-105 transition-transform relative">
+      <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
+      <img src="3.png" alt="Layout C" class="w-full h-64 object-contain bg-gray-100" />
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-semibold">Layout C</h3>
+        <p class="text-sm text-gray-600 mb-4">Size 6 x 2 Strip <br>(2 Pose)</p>
+        <a href="layoutC.html">
+          <button class="bg-[#00897b] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#00695c] transition-transform hover:scale-105">
+            START 
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full max-w-xs bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center hover:scale-105 transition-transform relative">
+      <div class="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW!</div>
+      <img src="4.png" alt="Layout D" class="w-full h-64 object-contain bg-gray-100" />
+      <div class="p-4 text-center">
+        <h3 class="text-lg font-semibold">Layout D</h3>
+        <p class="text-sm text-gray-600 mb-4">Size 6 x 4 Strip <br>(6 Pose)</p>
+        <a href="layoutD.html">
+          <button class="bg-[#00897b] text-white px-6 py-2 rounded-lg text-sm font-semibold hover:bg-[#00695c] transition-transform hover:scale-105">
+            START 
+          </button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+    <footer class="w-full text-center text-sm text-gray-600 py-4 mt-10">
+    &copy; 2025 Modern Photo Booth. All rights reserved.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  const navbar = document.querySelector(".navbar");
+  let lastScrollTop = 0;
+  let isScrolling;
+  let showTimeout;
+
+  function hideNavbar() {
+    navbar.classList.remove("navbar-visible");
+    navbar.classList.add("navbar-hidden");
+  }
+
+  function showNavbar() {
+    navbar.classList.remove("navbar-hidden");
+    navbar.classList.add("navbar-visible");
+
+    clearTimeout(showTimeout);
+    showTimeout = setTimeout(() => {
+      hideNavbar();
+    }, 3000); // Muncul selama 3 detik setelah interaksi
+  }
+
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+      // Scroll ke bawah → sembunyikan navbar
+      hideNavbar();
+    } else {
+      // Scroll ke atas → tampilkan navbar
+      showNavbar();
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+
+  // Tampilkan navbar saat ada interaksi
+  ["touchstart", "mousemove", "keydown"].forEach(event =>
+    window.addEventListener(event, () => {
+      showNavbar();
+    })
+  );
+
+  // Awal: tampilkan navbar
+  navbar.classList.add("navbar-visible");
+
+  </script>
+</body>
+</html>

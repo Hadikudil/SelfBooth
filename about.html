@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & FAQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #83b8c6, #e0f7fa);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      background-color: white;
+      border-left: 4px solid #ddd;
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .faq-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .primary-color {
+      color: black;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    } 
+
+  .navbar-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+  }
+
+  .navbar-visible {
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+  }
+
+  </style>
+</head>
+<body class="w-full">
+
+  <!-- Navbar (sama seperti index.html) -->
+  <nav class="navbar fixed top-0 z-50 w-full bg-white/90 shadow-md">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4 flex-wrap">
+        <div class="text-2xl font-bold text-[#00796b] tracking-wide w-full sm:w-auto text-center sm:text-left mb-2 sm:mb-0">
+          SELFBOOTH.ID
+        </div>
+        <ul class="flex flex-wrap justify-center sm:justify-end w-full sm:w-auto space-x-4 sm:space-x-6 font-semibold text-[#00796b]">
+          <li><a href="index.html" class="hover:text-[#004d40] transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#004d40] transition">About</a></li>
+          <li><a href="privacy.html" class="hover:text-[#004d40] transition">Privacy</a></li>
+          <li><a href="contact.html" class="hover:text-[#004d40] transition">Contact</a></li>
+          <li><a href="choseLayout.html" class="hover:text-[#004d40] transition">Layout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full px-4 sm:px-6 py-10 mx-auto fade-in">
+    <!-- About Section -->
+    <section id="about" class="mb-12 bg-white p-6 rounded-xl shadow">
+      <h2 class="text-3xl sm:text-5xl font-bold mb-6 text-center primary-color">Tentang Kami</h2>
+      <p class="text-base sm:text-xl mb-4">
+        <strong>Modern Photo Booth</strong> adalah solusi photo booth digital kekinian yang dirancang untuk acara, pesta, dan penggunaan pribadi. Kami menyajikan pengalaman berfoto yang menyenangkan dan interaktif langsung dari browser!
+      </p>
+      <p class="text-base sm:text-xl mb-4">
+        Fitur unggulan kami meliputi filter kamera (hitam putih, vintage, lembut), mode mirror, pengambilan foto otomatis dengan timer, serta kolase foto yang dapat dihias dengan frame dan stiker pilihan.
+      </p>
+      <p class="text-base sm:text-xl">
+        Kami percaya bahwa setiap momen layak untuk diabadikan secara kreatif. Modern Photo Booth memberikan cara mudah dan menyenangkan untuk melakukannya, tanpa perlu aplikasi tambahan.
+      </p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-white p-6 rounded-xl shadow">
+      <h2 class="text-3xl sm:text-5xl font-bold mb-6 text-center primary-color">Pertanyaan yang Sering Diajukan (FAQ)</h2>
+
+      <div class="faq-item">
+        <i data-lucide="camera" class="w-6 h-6 mt-1 mx-auto sm:mx-0" style="color: black;"></i>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-semibold primary-color">Apa itu Modern Photo Booth?</h3>
+          <p class="text-lg sm:text-xl text-gray-700 mt-1">Sebuah web photo booth modern berbasis browser yang memungkinkan kamu mengambil dan menghias foto langsung tanpa perlu aplikasi tambahan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <i data-lucide="download-cloud" class="w-6 h-6 mt-1 mx-auto sm:mx-0" style="color: black;"></i>
+        <div class="w-full">
+          <h3 class="text-xl sm:text-2xl font-semibold primary-color text-center">Apakah saya perlu menginstal aplikasi?</h3>
+          <p class="text-lg sm:text-xl text-gray-700 mt-1 text-center">Tidak. Semuanya berjalan langsung di browser kamu!</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <i data-lucide="wand" class="w-6 h-6 mt-1 mx-auto sm:mx-0" style="color: black;"></i>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-semibold primary-color">Apa saja fitur yang tersedia?</h3>
+          <p class="text-lg sm:text-xl text-gray-700 mt-1">Kamera otomatis, filter foto, mode mirror, kolase foto, serta penambahan frame dan stiker yang bisa disesuaikan.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <i data-lucide="save" class="w-6 h-6 mt-1 mx-auto sm:mx-0" style="color: black;"></i>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-semibold primary-color">Apakah hasil foto bisa disimpan?</h3>
+          <p class="text-lg sm:text-xl text-gray-700 mt-1">Ya! Setelah selesai mengedit, kamu bisa mengunduh hasil foto langsung ke perangkatmu.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <i data-lucide="smartphone" class="w-6 h-6 mt-1 mx-auto sm:mx-0" style="color: black;"></i>
+        <div>
+          <h3 class="text-xl sm:text-2xl font-semibold primary-color">Apakah bisa digunakan di semua perangkat?</h3>
+          <p class="text-lg sm:text-xl text-gray-700 mt-1">Modern Photo Booth mendukung semua perangkat modern seperti laptop, tablet, dan smartphone dengan kamera dan browser yang mendukung WebRTC.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full text-center text-sm text-gray-600 py-4 mt-10">
+    &copy; 2025 Modern Photo Booth. All rights reserved.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    lucide.createIcons();
+  const navbar = document.querySelector(".navbar");
+  let lastScrollTop = 0;
+  let isScrolling;
+  let showTimeout;
+
+  function hideNavbar() {
+    navbar.classList.remove("navbar-visible");
+    navbar.classList.add("navbar-hidden");
+  }
+
+  function showNavbar() {
+    navbar.classList.remove("navbar-hidden");
+    navbar.classList.add("navbar-visible");
+
+    clearTimeout(showTimeout);
+    showTimeout = setTimeout(() => {
+      hideNavbar();
+    }, 3000); // Muncul selama 3 detik setelah interaksi
+  }
+
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+      // Scroll ke bawah → sembunyikan navbar
+      hideNavbar();
+    } else {
+      // Scroll ke atas → tampilkan navbar
+      showNavbar();
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+
+  // Tampilkan navbar saat ada interaksi
+  ["touchstart", "mousemove", "keydown"].forEach(event =>
+    window.addEventListener(event, () => {
+      showNavbar();
+    })
+  );
+
+  // Awal: tampilkan navbar
+  navbar.classList.add("navbar-visible");
+
+  </script>
+</body>
+</html>

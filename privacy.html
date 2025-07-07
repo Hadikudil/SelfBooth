@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebijakan Privasi - Selfbooth.ID</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #83b8c6, #e0f7fa);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .primary-color {
+      color: #00695c;
+    }
+
+    .navbar-hidden {
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+
+    .navbar-visible {
+      transform: translateY(0);
+      transition: transform 0.4s ease;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      color: #555;
+      font-size: 0.9em;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="w-full">
+
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 z-50 w-full bg-white/90 shadow-md">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4 flex-wrap">
+        <div class="text-2xl font-bold text-[#00796b] tracking-wide w-full sm:w-auto text-center sm:text-left mb-2 sm:mb-0">
+          SELFBOOTH.ID
+        </div>
+        <ul class="flex flex-wrap justify-center sm:justify-end w-full sm:w-auto space-x-4 sm:space-x-6 font-semibold text-[#00796b]">
+          <li><a href="index.html" class="hover:text-[#004d40] transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#004d40] transition">About</a></li>
+          <li><a href="privacy.html" class="hover:text-[#004d40] transition">Privacy</a></li>
+          <li><a href="contact.html" class="hover:text-[#004d40] transition">Contact</a></li>
+          <li><a href="choseLayout.html" class="hover:text-[#004d40] transition">Layout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl w-full mx-auto py-24 px-6 fade-in">
+    <section class="bg-white p-8 rounded-xl shadow-lg">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 text-center primary-color">Kebijakan Privasi</h2>
+      <p class="text-lg mb-4 text-gray-700">
+        <strong>Privasi Anda adalah prioritas kami!</strong> Aplikasi Photobooth ini tidak mengumpulkan, menyimpan, atau membagikan data atau foto apa pun dari Anda. Semuanya terjadi secara lokal di perangkat Anda—gambar Anda tidak pernah meninggalkan browser Anda.
+      </p>
+      <p class="text-lg mb-4 text-gray-700">
+        Aplikasi ini hanya mengakses kamera Anda dengan izin Anda, dan setelah Anda mengambil foto, foto tersebut tetap bersama Anda. Tidak ada unggahan, tidak ada pelacakan, tidak ada penyimpanan tersembunyi.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Selfbooth.ID. All rights reserved.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    lucide.createIcons();
+
+    const navbar = document.querySelector(".navbar");
+    let lastScrollTop = 0;
+    let showTimeout;
+
+    function hideNavbar() {
+      navbar.classList.remove("navbar-visible");
+      navbar.classList.add("navbar-hidden");
+    }
+
+    function showNavbar() {
+      navbar.classList.remove("navbar-hidden");
+      navbar.classList.add("navbar-visible");
+
+      clearTimeout(showTimeout);
+      showTimeout = setTimeout(() => {
+        hideNavbar();
+      }, 3000);
+    }
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        hideNavbar();
+      } else {
+        showNavbar();
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    ["touchstart", "mousemove", "keydown"].forEach(event =>
+      window.addEventListener(event, () => showNavbar())
+    );
+
+    navbar.classList.add("navbar-visible");
+  </script>
+</body>
+</html>
