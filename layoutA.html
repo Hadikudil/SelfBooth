@@ -34,6 +34,7 @@
       background: black;
       border: 8px solid white;
       border-radius: 20px;
+      transform: scaleX(-1); /* Efek mirror */
     }
 
     canvas {
@@ -260,9 +261,12 @@
       for (let i = 0; i < 3; i++) {
         await countdown(timer);
         stripCtx.filter = video.style.filter;
-        stripCtx.drawImage(video, 0, i * 300, stripCanvas.width, 300);
-        stripCtx.filter = "none";
-      }
+       stripCtx.save();
+stripCtx.translate(stripCanvas.width, 0);
+stripCtx.scale(-1, 1);
+stripCtx.drawImage(video, 0, i * 300, stripCanvas.width, 300);
+stripCtx.restore();
+
 
       startBtn.style.display = "none";
       afterCapture.classList.remove("hidden");
