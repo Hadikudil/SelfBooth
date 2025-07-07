@@ -264,8 +264,12 @@
        stripCtx.save();
 stripCtx.translate(stripCanvas.width, 0);
 stripCtx.scale(-1, 1);
+stripCtx.save();
+stripCtx.translate(stripCanvas.width, 0);
+stripCtx.scale(-1, 1);
 stripCtx.drawImage(video, 0, i * 300, stripCanvas.width, 300);
 stripCtx.restore();
+      }
 
 
       startBtn.style.display = "none";
